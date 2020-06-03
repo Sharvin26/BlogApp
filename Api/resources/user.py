@@ -9,8 +9,9 @@ from flask_jwt_extended import (
     jwt_required,
     jwt_optional
 )
+from threading import Thread
 from repository.models import User, Blog
-from utils.helper import get_blogs
+from utils.helper import get_blogs, confirm_account
 from utils.token_manager import generate_tokens, refresh_a_token
 from mongoengine.errors import ( 
     ValidationError,
@@ -28,7 +29,6 @@ from utils.errors import (
     InternalServerError
 )
 
-
 class SignUpApi(Resource):
     def post(self):
         try:
@@ -39,6 +39,8 @@ class SignUpApi(Resource):
                 raise PasswordValidationFailed
             user.hash_password()
             user.save()
+            Thread(target=confirm_account, 
+                            args=(user_data.get('email'),)).start()
             return generate_tokens(user), 200
         except (FieldDoesNotExist, ValidationError):
             raise SchemaValidationError

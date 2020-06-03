@@ -22,6 +22,15 @@ class UserDoesnotExistsError(Exception):
 class NotAllowed(Exception):
     pass
 
+class EmailAlreadyExistsError(Exception):
+    pass
+
+class BadTokenError(Exception):
+    pass
+
+class ExpiredTokenError(Exception):
+    pass
+
 errors = {
     "InternalServerError": {
         "message": "Something went wrong",
@@ -54,5 +63,17 @@ errors = {
     "NotAllowed": {
         "message": "Not Allowed",
         "status": 403
+    },
+    "EmailAlreadyExistsError": {
+        "message": "EmailAlreadyExistsError",
+        "status": 409
+    },
+    "BadTokenError": {
+        "message": "Invalid token",
+        "status": 403
+    },
+    "ExpiredTokenError": {
+        "message": "Token expired",
+        "status": 404
     }
 }
