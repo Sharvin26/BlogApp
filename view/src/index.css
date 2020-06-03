@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&family=Ubuntu:wght@300&display=swap");
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #ff6a67;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+a {
+    color: #343a40;
+}
+
+a:hover {
+    color: #343a40;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+}
+
+.btn-link {
+    color: #ff6a67;
+}
+
+.btn-link:hover {
+    color: #343a40;
+    text-decoration: none;
+}
+
+*:focus:not(.focus-visible) {
+    outline: none;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px white inset !important;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.form-control {
+    border: 0;
+    border-bottom: 2px solid #343a40;
+}
+
+.form-control:focus {
+    border: 0;
+    border-bottom: 2px solid #ff6a67;
+}
+
+.page-link {
+    border: none;
+}
+
+.alert-dark {
+    font-weight: bolder;
+    color: #343a40;
+}
+
+.alert-danger {
+    color: #ff6a67;
+    background-color: white;
+    border: none;
+    padding: none;
+}
+
+.alert {
+    padding: 0.7rem 0.25rem;
+}
+
+.chooseFileButton {
+    font-weight: bolder;
+    font-size: 18;
+    color: #ff6a67;
+    background-color: white;
+    border: 1px solid #343a40;
+}
+
+.fileContainer {
+    padding: none;
+    box-shadow: none;
+}
+
+@media (min-width: 576px) {
+    .jumbotron {
+        padding: 0rem 0rem;
+    }
+}
+
+input {
+    filter: none;
+}
+
+[disabled] {
+    color: #343a40;
+}
